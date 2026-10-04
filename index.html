@@ -4,178 +4,327 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>My Portfolio</title>
 </head>
 
 <body>
+
     <header>
         <div class="header-container">
+
             <div class="logo">
                 <img src="images/logo.png" alt="Logo" width="80">
             </div>
+
             <div class="nav-bar">
                 <nav>
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#AboutMe">About Me</a></li>
                         <li><a href="#MyProjects">My Projects</a></li>
-                        <li><a href="#MySkills"> My Skills</a></li>
+                        <li><a href="#MySkills">My Skills</a></li>
                         <li><a href="#Education">Education</a></li>
                         <li><a href="#ContactMe">Contact</a></li>
                     </ul>
                 </nav>
             </div>
+
             <div class="search-bar">
-                <form>
-                    <input type="text" placeholder="Search">
-                    <button type="Submit">Search</button>
+                <form action="#" method="get">
+                    <input type="search" name="search" placeholder="Search" aria-label="Search">
+                    <button type="submit">Search</button>
                 </form>
             </div>
+
         </div>
     </header>
+
     <main>
+
         <section id="AboutMe">
-            <h1>
-                About Me
-            </h1>
-            <p>
-                My name is Janak Magar, and I am from Lazimpat, Kathmandu, Nepal. I completed my SEE from Sunrise Boarding School
-                and i have completed from +2 from Trinity International College, Putalisadak, Kathmandu. Currently, I am pursuing my Bachelor’s
-                degree at Model Institute of Technology (MIT), affiliated with International American University.
+            <h1>About Me</h1>
 
-                I consider myself an honest, punctual, hardworking, and self-motivated person. I always try to learn
-                from my experiences and improve myself both personally and academically. My main goal is to maintain a
-                good GPA throughout my studies while developing practical and field-related skills that will help me
-                build a successful career.
+            <div class="about-container">
 
-                Apart from academics, I enjoy swimming, playing football, and video editing. I am particularly
-                interested in learning new skills and gaining practical experience. I also want to gain professional
-                experience through internships and other opportunities related to my field.
+                <div class="about-text">
+                    <p>
+                        My name is Janak Magar, and I am from Lazimpat, Kathmandu, Nepal.
+                        I completed my SEE from Sunrise Boarding School and my +2 from
+                        Trinity International College, Putalisadak, Kathmandu. Currently,
+                        I am pursuing my Bachelor's degree at Model Institute of Technology
+                        (MIT), affiliated with International American University.
+                    </p>
 
-                In the future, I aim to complete my degree successfully, continue developing my professional skills, and
-                build a stable and successful career. I believe that consistent effort, a positive attitude, and a
-                willingness to learn are important for achieving my goals.
-            </p>
+                    <p>
+                        I consider myself an honest, punctual, hardworking, and self-motivated
+                        person. I always try to learn from my experiences and improve myself
+                        both personally and academically. My main goal is to maintain a good
+                        GPA throughout my studies while developing practical and field-related
+                        skills that will help me build a successful career.
+                    </p>
+
+                    <p>
+                        Apart from academics, I enjoy swimming, playing football, and video
+                        editing. I am particularly interested in learning new skills and
+                        gaining practical experience. I also want to gain professional
+                        experience through internships and other opportunities related to
+                        my field.
+                    </p>
+
+                    <p>
+                        In the future, I aim to complete my degree successfully, continue
+                        developing my professional skills, and build a stable and successful
+                        career. I believe that consistent effort, a positive attitude, and
+                        a willingness to learn are important for achieving my goals.
+                    </p>
+                </div>
+
+                <div class="about-image">
+                    <img src="images/profile_pic.jpeg" alt="Profile picture of Janak Magar">
+                </div>
+
+            </div>
         </section>
 
-        <img src="images/profile pic.jpeg" alt="Logo" width="100" height="100">
-        <section id="MyProjects">
-            <h1>
-                My Projects
-            </h1>
+
+        <section id="MyProjects" class="project-container">
+
+            <h1>My Projects</h1>
+
             <article>
-                <h2>Student Attandence Management System</h2>
-                <p>I developed a Student Attendance Management System to help teachers record and manage student
-                    attendance digitally. Through this project, I learned how to store student information, mark
-                    attendance, and calculate attendance percentages. I used HTML, CSS, JavaScript, PHP, and MySQL to
-                    understand the basic concepts of web development and database management.
+                <h2>Student Attendance Management System</h2>
+
+                <p>
+                    I developed a Student Attendance Management System to help teachers
+                    record and manage student attendance digitally. Through this project,
+                    I learned how to store student information, mark attendance, and
+                    calculate attendance percentages. I used HTML, CSS, JavaScript, PHP,
+                    and MySQL to understand the basic concepts of web development and
+                    database management.
                 </p>
+
+                <a class="project-link"
+                    href="https://github.com/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Click to View
+                </a>
             </article>
+
+
             <article>
                 <h2>Library Management System</h2>
-                <p>
-                    I created a Library Management System to manage books and library records more efficiently. My
-                    project allows users to add, search, borrow, and return books while maintaining proper records.
-                    Through this project, I improved my understanding of programming, database management, and
-                    problem-solving skills.
 
+                <p>
+                    I created a Library Management System to manage books and library
+                    records more efficiently. My project allows users to add, search,
+                    borrow, and return books while maintaining proper records. Through
+                    this project, I improved my understanding of programming, database
+                    management, and problem-solving skills.
                 </p>
+
+                <a class="project-link"
+                    href="https://github.com/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Click to View
+                </a>
             </article>
+
+
             <article>
-                <h2>online Food Ordering System</h2>
-                <p>
-                    I developed an Online Food Ordering System that allows customers to view food items and place orders
-                    online. The project includes features such as food item management, customer orders, and order
-                    tracking. By working on this project, I gained practical knowledge of web development, user
-                    interfaces, and database connectivity.
-                </p>
-            </article>
-        </section>
-        <section id="MySkills">
-            <h1> My Skills</h1>
-            <dl>
-                <dt><b>Programming Language </b></dt>
-                <dd>JavaScript,C,Python </dd>
-                <dt><b>Database</b></dt>
-                <dd>Oracle Database,Postgresql </dd>
-                <dt><b>Tools</b></dt>
-                <dd> Wireshark, Ms word, Figma, Powerpoint </dd>
-                <dt><b>Framework</b></dt>
-                <dd>Flask,Laravel </dd>
-            </dl>
-        </section>
-        <section id="Education">
-            <h1>Education</h1>
-        </section>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th> S.N.</th>
-                    <th>Level</th>
-                    <th>Completion Date</th>
-                    <th>Institution</th>
-                    <th>GPA</th>
-                    <th>Grade</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>SEE</td>
-                    <td>2020
-                    <td>D.A.V</td>
-                    <td>3.86</td>
-                    <td>A+</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>+2</td>
-                    <td>2024</td>
-                    <td>D.A.V Sushil Kedia Vishwa Bharti College</td>
-                    <td>3.45</td>
-                    <td>A+</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Bachelors</td>
-                    <td>Ongoing</td>
-                    <td>Model Institute of Technology</td>
-                    <td>ongoing</td>
-                    <td>ongoing</td>
-                </tr>
-            </tbody>
+                <h2>Online Food Ordering System</h2>
 
-        </table>
-        <section id="ContactMe">
-            <h1> Contact Me</h1>
-            <form>
-                <label>Name</label><br>
-                <input type="text" placeholder="Name"><br>
-                <label>Email</label><br>
-                <input type="email" placeholder="Email"><br>
-                <label>Message</label><br>
-                <textarea placeholder="Message...."></textarea><br>
+                <p>
+                    I developed an Online Food Ordering System that allows customers to
+                    view food items and place orders online. The project includes features
+                    such as food item management, customer orders, and order tracking.
+                    By working on this project, I gained practical knowledge of web
+                    development, user interfaces, and database connectivity.
+                </p>
+
+                <a class="project-link"
+                    href="https://github.com/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Click to View
+                </a>
+            </article>
+
+        </section>
+
+
+        <section id="MySkills" class="skills-container">
+
+            <h1>My Skills</h1>
+
+            <div class="description-grid">
+
+                <dl class="description-list">
+                    <dt>Programming Languages</dt>
+                    <dd>JavaScript, C, Python</dd>
+                </dl>
+
+                <dl class="description-list">
+                    <dt>Databases</dt>
+                    <dd>Oracle Database, PostgreSQL</dd>
+                </dl>
+
+                <dl class="description-list">
+                    <dt>Tools</dt>
+                    <dd>Wireshark, MS Word, Figma, PowerPoint</dd>
+                </dl>
+
+                <dl class="description-list">
+                    <dt>Frameworks</dt>
+                    <dd>Flask, Laravel</dd>
+                </dl>
+
+            </div>
+
+        </section>
+
+
+        <section id="Education" class="education-container">
+
+            <h1>Education</h1>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>S.N.</th>
+                            <th>Level</th>
+                            <th>Completion Date</th>
+                            <th>Institution</th>
+                            <th>GPA</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>1</td>
+                            <td>SEE</td>
+                            <td>2020</td>
+                            <td>D.A.V</td>
+                            <td>3.86</td>
+                            <td>A+</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>+2</td>
+                            <td>2024</td>
+                            <td>D.A.V Sushil Kedia Vishwa Bharti College</td>
+                            <td>3.45</td>
+                            <td>A+</td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>Bachelor's</td>
+                            <td>Ongoing</td>
+                            <td>Model Institute of Technology</td>
+                            <td>Ongoing</td>
+                            <td>Ongoing</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <section id="ContactMe" class="contact-container">
+
+            <h1>Contact Me</h1>
+
+            <form action="#" method="post">
+
+                <label for="name">Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required>
+
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required>
+
+                <label for="message">Message</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Write your message..."
+                    required></textarea>
+
                 <button type="submit">Send</button>
 
             </form>
+
         </section>
+
     </main>
+
+
     <footer>
-        <h2>Find Me On </h2>
-        <a href="https://www.instagram.com/" target="_blank">
-            <img src="images/insta logo.png" alt="logo" width="40" height="40"></a>
 
-        <a href="https://www.facebook.com/" target="_blank">
-            <img src="images/facebook logo.png" alt="logo" width="40" height="40">
-        </a>
+        <h2>Find Me On</h2>
 
-        <a href="https://www.gmail.com/" target="_blank">
-            <img src="images/gmail.png" width="40" height="40" alt="logo">
-        </a>
+        <div class="social-links">
 
+            <a href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer">
+                <img
+                    src="images/insta_logo.png"
+                    alt="Instagram"
+                    width="40"
+                    height="40">
+            </a>
 
-        &copy; copyright &copy; 2026 Janak Magar. All rights reserved.
+            <a href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer">
+                <img
+                    src="images/facebook_logo.png"
+                    alt="Facebook"
+                    width="40"
+                    height="40">
+            </a>
+
+            <a href="https://www.gmail.com/"
+                target="_blank"
+                rel="noopener noreferrer">
+                <img
+                    src="images/gmail.png"
+                    alt="Gmail"
+                    width="40"
+                    height="40">
+            </a>
+
+        </div>
+
+        <p>
+            &copy; 2026 Janak Magar. All rights reserved.
+        </p>
+
     </footer>
+
 </body>
 
 </html>
