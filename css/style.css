@@ -137,6 +137,102 @@ main {
     margin-bottom: 0;
 }
 
+
+/* Image Slider */
+
+.slider {
+    position: relative;
+    flex: 0 0 30%;
+    width: 100%;
+    max-width: 280px;
+    align-self: center;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(93, 18, 53, 0.25);
+    touch-action: pan-y;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.slider-track img {
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 0;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    user-select: none;
+}
+
+.slider .prev,
+.slider .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 44px;
+    border: 0;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.slider .prev {
+    left: 8px;
+}
+
+.slider .next {
+    right: 8px;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 2px;
+    padding: 4px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.slider .dot {
+    width: 28px;
+    height: 28px;
+    padding: 7px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.slider .dot::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: white;
+}
+
+.slider .dot.active::before {
+    background: #ffd1df;
+}
+
+.slider button:focus-visible {
+    outline: 3px solid #ffd1df;
+    outline-offset: 2px;
+}
+
+
+/* Existing Profile Image Styles */
+
 .about-image {
     flex: 0 0 30%;
     display: flex;
@@ -154,6 +250,9 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(93, 18, 53, 0.25);
 }
+
+
+/* Education Table */
 
 .table-container {
     width: 100%;
@@ -391,6 +490,12 @@ footer p {
         height: 240px;
     }
 
+    .slider {
+        flex: 0 1 auto;
+        width: 220px;
+        max-width: 100%;
+    }
+
     .description-grid {
         grid-template-columns: 1fr;
     }
@@ -401,5 +506,14 @@ footer p {
 
     table {
         min-width: 700px;
+    }
+}
+
+
+/* Respect Reduced-Motion Preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    .slider-track {
+        transition: none;
     }
 }
