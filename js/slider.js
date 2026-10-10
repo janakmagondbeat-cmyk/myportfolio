@@ -1,30 +1,15 @@
 class ImageSlider {
     constructor(selector) {
-        this.slider = document.querySelector(selector);
-
-        if (!this.slider) {
-            return;
-        }
-
         this.autoPlayDelay = 5000;
+        this.slider = document.querySelector(selector);
         this.track = this.slider.querySelector(".slider-track");
-        this.slides = this.track ? Array.from(this.track.children) : [];
+        this.slides = Array.from(this.track.children);
         this.prevButton = this.slider.querySelector(".prev");
         this.nextButton = this.slider.querySelector(".next");
         this.dotsContainer = this.slider.querySelector(".slider-dots");
         this.dots = [];
         this.currentIndex = 0;
         this.autoPlayTimer = null;
-
-        if (
-            !this.track ||
-            this.slides.length === 0 ||
-            !this.prevButton ||
-            !this.nextButton ||
-            !this.dotsContainer
-        ) {
-            return;
-        }
 
         this.init();
     }
@@ -51,8 +36,6 @@ class ImageSlider {
     }
 
     nextSlide() {
-        if (this.slides.length < 2) return;
-
         this.currentIndex =
             (this.currentIndex + 1) % this.slides.length;
 
@@ -60,8 +43,6 @@ class ImageSlider {
     }
 
     prevSlide() {
-        if (this.slides.length < 2) return;
-
         if (this.currentIndex > 0) {
             this.currentIndex--;
         } else {
@@ -102,15 +83,12 @@ class ImageSlider {
     }
 
     startAutoPlay() {
-        if (
-            this.slides.length < 2 ||
-            window.matchMedia("(prefers-reduced-motion: reduce)").matches
-        ) {
+        if (this.slides.length < 2 ||
+            window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
             return;
         }
 
         this.stopAutoPlay();
-
         this.autoPlayTimer = window.setInterval(() => {
             this.nextSlide();
         }, this.autoPlayDelay);
@@ -143,23 +121,19 @@ class ImageSlider {
             }
         });
 
-        // Support swiping on mobile devices.
         let startX = null;
         let startY = null;
 
         this.slider.addEventListener("touchstart", (event) => {
-            if (!event.touches.length) return;
-
             startX = event.touches[0].clientX;
             startY = event.touches[0].clientY;
         }, { passive: true });
 
         this.slider.addEventListener("touchend", (event) => {
-            if (startX === null || !event.changedTouches.length) return;
+            if (startX === null) return;
 
             const differenceX =
                 event.changedTouches[0].clientX - startX;
-
             const differenceY =
                 event.changedTouches[0].clientY - startY;
 
@@ -175,15 +149,12 @@ class ImageSlider {
             }
 
             startX = null;
-            startY = null;
         }, { passive: true });
 
         this.slider.addEventListener("touchcancel", () => {
             startX = null;
-            startY = null;
         });
 
-        // Pause automatic sliding when the mouse enters the slider.
         this.slider.addEventListener("mouseenter", () => {
             this.stopAutoPlay();
         });
@@ -192,7 +163,6 @@ class ImageSlider {
             this.startAutoPlay();
         });
 
-        // Pause automatic sliding while the slider has keyboard focus.
         this.slider.addEventListener("focusin", () => {
             this.stopAutoPlay();
         });
